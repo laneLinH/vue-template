@@ -5,13 +5,14 @@ import 'normalize.css/normalize.css'
 import App from './App'
 import router from './router'
 import store from './store'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import * as filters from './filters'
-
-Vue.config.productionTip = false
+Vue.use(ElementUI);
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
-
+Vue.config.productionTip = false
 router.beforeEach((to,from,next) => {
   next()
   if(to.meta.title){
