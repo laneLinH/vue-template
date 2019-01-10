@@ -8,6 +8,9 @@ import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import * as filters from './filters'
+import _ from 'lodash'
+
+window._=_
 Vue.use(ElementUI);
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
@@ -21,10 +24,12 @@ router.beforeEach((to,from,next) => {
 })
 
 /* eslint-disable no-new */
-new Vue({
+var vueTemplate=new Vue({
   el: '#app',
   router,
   store,
   components: { App },
   template: '<App/>'
 })
+
+console.log(vueTemplate)

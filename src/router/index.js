@@ -4,14 +4,27 @@ import Router from 'vue-router'
 Vue.use(Router)
 const routes=[
   {
-    path: '/',
+    path: '/home',
     name: 'Home',
-    component:Components.Home
+    component:Components.defualtTemplate,
+    hidden:true,
+    children:[
+      {
+        path: 'test1',
+        name: 'test1',
+        component: Components.test,
+        children: []
+      }
+    ]
   },
   {
-    path: '/home1',
-    name: 'Home1',
-    component:Components.Home1
+    path: '/login',
+    name: 'login',
+    component:Components.login
+  },
+  {
+    path: '*',
+    redirect:'/home'
   }
 ]
 

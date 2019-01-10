@@ -1,4 +1,4 @@
-import HelloWorld from './src/components/HelloWorld'
+import test from './src/page/test'
 export{
-  HelloWorld
+  test
 }

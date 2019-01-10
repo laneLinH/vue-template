@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name:'Main'
+  name:'App'
 }
 </script>
 <style rel="stylesheet/scss" lang="scss">

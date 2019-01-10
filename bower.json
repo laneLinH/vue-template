@@ -3,19 +3,14 @@
   "version": "0.0.1",
   "dependencies": {},
   "main": [
-    "./dist/scripts/app-*.js",
-    "./dist/styles/app-*.css",
-    "./dist/assets/**/*"
+    "./src/*",
+    "./index.html",
+    "./index.js"
   ],
   "ignore": [
     ".*",
-    "src/",
-    "gulp/",
-    "e2e/",
-    "gulpfile.js",
-    "karma.conf.js",
-    "protractor.conf.js",
-    "constants.json",
-    "app/"
+    "node_modules/",
+    "dist/",
+    "config/"
   ]
 }

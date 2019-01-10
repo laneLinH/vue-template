@@ -1,6 +1,9 @@
-const Home = () => import(/* webpackChunkName: "Home" */ '@/components/Home')
-const Home1 = () => import(/* webpackChunkName: "Home1" */ '@/components/Home1')
+const defualtTemplate = () => import(/* webpackChunkName: "defualt" */ '@/layout/defualt')
+const login = () => import(/* webpackChunkName: "defualt" */ '@/page/login/login')
+const test = () => import(/* webpackChunkName: "defualt" */ '@/page/test')
+
 export default{
-  Home,
-  Home1
+  defualtTemplate,
+  login,
+  test
 }
